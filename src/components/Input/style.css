@@ -1,0 +1,36 @@
+.container-input{
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+}
+
+.decimal-input {
+    padding: 6px;
+    font-size: 20px;
+    border: 2px solid #ffa6cd;
+    border-radius: 5px;
+    outline: none;
+    width: 155px;   
+    text-align: center;
+}
+
+/* Opcional: Estilizar o campo quando estiver em foco */
+.decimal-input:focus {
+border-color: #ff4d9a; /* Cor verde quando está em foco */
+box-shadow: 0 0 1px rgba(50, 205, 50, 0.7); /* Sombra leve verde */
+} 
+
+.label-input{
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0;
+width: 170px;  
+display: block;
+font-family: 'Arial', sans-serif;
+font-size: 20px;
+color: #ffffff; /* Cor do texto */
+margin-bottom: 8px; 
+text-align: center;
+}

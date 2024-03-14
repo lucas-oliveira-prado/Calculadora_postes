@@ -1,0 +1,24 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffb6c1; /* Cor de fundo da tela */
+}
+
+.container-inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    /*background-color: #ffd3e6; /* Cor rosa bebê */
+    background-color: #333333;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    width: 600px;
+    height: 700px;
+}

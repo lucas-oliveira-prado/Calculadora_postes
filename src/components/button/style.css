@@ -1,0 +1,41 @@
+.container-button {
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #ffa6cd; /* Cor de fundo do botão */
+    color: #000000; /* Cor do texto do botão */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição de cor ao passar o mouse */
+    font-family: 'Arial', sans-serif, bold;
+    font-size: 20px;
+  }
+
+  .button:hover {
+    background-color: #ff4d9a; /* Cor de fundo do botão ao passar o mouse */
+  }
+
+  .button:hover + .label-button{
+    color: #ff4d9a; /* Cor de fundo do botão ao passar o mouse */
+  }
+
+  .label-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 170px;  
+    display: block;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    color: #333333; /* Cor do texto */
+    margin-bottom: 8px; 
+    text-align: center;
+  }
