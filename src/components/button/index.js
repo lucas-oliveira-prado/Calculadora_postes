@@ -1,12 +1,12 @@
-import './style.css'
+import React from 'react';
+import './style.css';
 
-function Button(props){
-    return(
-        <div class="container-button">
-            <button class="button">{props.children}</button>
-            <label class="label-button">Não é possível calcular o tamanho do meu amor por voce S2</label>
+function Button({ onClick, children }) {
+    return (
+        <div className="container-button">
+            <button className="button" onClick={onClick}>{children}</button>
         </div>
-    )
+    );
 }
-
-export default Button
+// <label className="label-button">Não é possível calcular o tamanho do meu amor por você S2</label>
+export default Button;
