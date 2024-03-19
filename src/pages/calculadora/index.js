@@ -17,20 +17,20 @@ function Calculadora(){
           preserveAspectRatio: 'xMidYMid slice'
         }
     };
-    const [numPostes, setNumPostes] = useState(0);
-    const [valorPorPoste, setValorPorPoste] = useState(0);
-    const [valorTotalAtual, setValorTotalAtual] = useState((0).toFixed(2));
-    const [valorMensalRef, setValorMensalRef] = useState((0).toFixed(2)); 
-    const [valorEconomiaMensal, setValorEconomiaMensal] = useState((0).toFixed(2));
+    const [numPostes, setNumPostes] = useState("");
+    const [valorPorPoste, setValorPorPoste] = useState("");
+    const [valorTotalAtual, setValorTotalAtual] = useState((0.00).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'}));
+    const [valorMensalRef, setValorMensalRef] = useState((0.00).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'})); 
+    const [valorEconomiaMensal, setValorEconomiaMensal] = useState((0.00).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'}));
     const [valorHonorarios, setValorHonorarios] = useState("0 x R$ 0,00");
-  
+
     const calcularValorTotal = () => {
         const total = parseFloat(valorPorPoste) * parseFloat(numPostes);
         const valorMensalRef = parseFloat(numPostes) * 3.19;
         const valorEconomiaMensal = parseFloat(total) - parseFloat(valorMensalRef);
-        setValorMensalRef (valorMensalRef.toFixed(2));
-        setValorTotalAtual(total.toFixed(2));
-        setValorEconomiaMensal(valorEconomiaMensal.toFixed(2));
+        setValorMensalRef (valorMensalRef.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'}));
+        setValorTotalAtual(total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'}));
+        setValorEconomiaMensal(valorEconomiaMensal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'}));
 
         if (numPostes > 0 && numPostes <= 400) {
             setValorHonorarios("8 x R$ 900,00 ");
