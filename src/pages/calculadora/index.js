@@ -17,13 +17,12 @@ function Calculadora(){
           preserveAspectRatio: 'xMidYMid slice'
         }
     };
-
-    const [numPostes, setNumPostes] = useState(0.00);
-    const [valorPorPoste, setValorPorPoste] = useState(0.00);
-    const [valorTotalAtual, setValorTotalAtual] = useState(0.00);
-    const [valorMensalRef, setValorMensalRef] = useState(0.00);
-    const [valorEconomiaMensal, setValorEconomiaMensal] = useState(0.00);
-    const [valorHonorarios, setValorHonorarios] = useState("");
+    const [numPostes, setNumPostes] = useState(0);
+    const [valorPorPoste, setValorPorPoste] = useState(0);
+    const [valorTotalAtual, setValorTotalAtual] = useState((0).toFixed(2));
+    const [valorMensalRef, setValorMensalRef] = useState((0).toFixed(2)); 
+    const [valorEconomiaMensal, setValorEconomiaMensal] = useState((0).toFixed(2));
+    const [valorHonorarios, setValorHonorarios] = useState("0 x R$ 0,00");
   
     const calcularValorTotal = () => {
         const total = parseFloat(valorPorPoste) * parseFloat(numPostes);
@@ -47,7 +46,7 @@ function Calculadora(){
         } else if (numPostes > 5000) {
             setValorHonorarios("12 x R$ 3000,00 ");
         } else {
-            setValorHonorarios("");
+            setValorHonorarios("0 x R$ 0,00");
         }
         
     };
