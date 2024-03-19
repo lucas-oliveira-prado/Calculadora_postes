@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Calculadora_postes/static/css/main.d70e6bf8.css",
-    "main.js": "/Calculadora_postes/static/js/main.890aa8ad.js",
+    "main.css": "/Calculadora_postes/static/css/main.cd23e0eb.css",
+    "main.js": "/Calculadora_postes/static/js/main.d9b9c779.js",
     "static/js/787.94ee466b.chunk.js": "/Calculadora_postes/static/js/787.94ee466b.chunk.js",
     "static/media/logo.svg": "/Calculadora_postes/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Calculadora_postes/index.html",
-    "main.d70e6bf8.css.map": "/Calculadora_postes/static/css/main.d70e6bf8.css.map",
-    "main.890aa8ad.js.map": "/Calculadora_postes/static/js/main.890aa8ad.js.map",
+    "main.cd23e0eb.css.map": "/Calculadora_postes/static/css/main.cd23e0eb.css.map",
+    "main.d9b9c779.js.map": "/Calculadora_postes/static/js/main.d9b9c779.js.map",
     "787.94ee466b.chunk.js.map": "/Calculadora_postes/static/js/787.94ee466b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d70e6bf8.css",
-    "static/js/main.890aa8ad.js"
+    "static/css/main.cd23e0eb.css",
+    "static/js/main.d9b9c779.js"
   ]
 }
