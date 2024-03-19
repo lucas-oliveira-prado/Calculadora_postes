@@ -25,7 +25,7 @@ function Calculadora(){
     const [valorHonorarios, setValorHonorarios] = useState("0 x R$ 0,00");
 
     const calcularValorTotal = () => {
-        const total = parseFloat(valorPorPoste) * parseFloat(numPostes);
+        const total = parseFloat(valorPorPoste.replace(',', '.')) * parseFloat(numPostes);
         const valorMensalRef = parseFloat(numPostes) * 3.19;
         const valorEconomiaMensal = parseFloat(total) - parseFloat(valorMensalRef);
         setValorMensalRef (valorMensalRef.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'}));
