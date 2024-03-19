@@ -32,8 +32,7 @@ function Calculadora(){
         setValorTotalAtual(total.toFixed(2));
         setValorEconomiaMensal(valorEconomiaMensal.toFixed(2));
 
-        if (numPostes <= 400) {
-            console.log("teste");
+        if (numPostes > 0 && numPostes <= 400) {
             setValorHonorarios("8 x R$ 900,00 ");
         } else if (numPostes > 400 && numPostes <= 700) {
             setValorHonorarios("8 x R$ 1000,00 ");
