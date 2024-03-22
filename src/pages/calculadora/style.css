@@ -13,6 +13,14 @@ body{
     align-items: center;
 }
 
+.container-outputs {
+    display: flex;
+    flex-direction: column; /* Altera a direção do fluxo dos elementos para de cima para baixo */
+    justify-content: center;
+    align-items: center;
+}
+
+
 .container{
     /*background-color: #ffd3e6; /* Cor rosa bebê */
     background-color: #333333;

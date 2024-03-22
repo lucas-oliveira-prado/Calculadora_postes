@@ -25,24 +25,24 @@ function Calculadora(){
     const [valorHonorarios, setValorHonorarios] = useState("0 x R$ 0,00");
 
     const calcularValorTotal = () => {
-        const total = parseFloat(valorPorPoste.replace(',', '.')) * parseFloat(numPostes);
-        const valorMensalRef = parseFloat(numPostes) * 3.19;
+        const total = parseFloat(valorPorPoste.replace('.', '').replace(',', '.')) * parseFloat(numPostes.replace('.', '').replace(',', '.'));
+        const valorMensalRef = parseFloat(numPostes.replace('.', '').replace(',', '.')) * 3.19;
         const valorEconomiaMensal = parseFloat(total) - parseFloat(valorMensalRef);
         setValorMensalRef (valorMensalRef.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'}));
         setValorTotalAtual(total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'}));
         setValorEconomiaMensal(valorEconomiaMensal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'}));
 
-        if (numPostes > 0 && numPostes <= 400) {
-            setValorHonorarios("8 x R$ 900,00 ");
-        } else if (numPostes > 400 && numPostes <= 700) {
-            setValorHonorarios("8 x R$ 1000,00 ");
-        } else if (numPostes > 700 && numPostes <= 1500) {
-            setValorHonorarios("8 x R$ 1200,00 ");
-        } else if (numPostes > 1500 && numPostes <= 2500) {
-            setValorHonorarios("9 x R$ 1900,00 ");
-        } else if (numPostes > 2500 && numPostes <= 5000) {
+        if (numPostes.replace('.', '').replace(',', '.') > 0 && numPostes.replace('.', '').replace(',', '.') <= 400) {
+            setValorHonorarios("12 x R$ 900,00 ");
+        } else if (numPostes.replace('.', '').replace(',', '.') > 400 && numPostes.replace('.', '').replace(',', '.') <= 700) {
+            setValorHonorarios("12 x R$ 1000,00 ");
+        } else if (numPostes.replace('.', '').replace(',', '.') > 700 && numPostes.replace('.', '').replace(',', '.') <= 1500) {
+            setValorHonorarios("12 x R$ 1200,00 ");
+        } else if (numPostes.replace('.', '').replace(',', '.') > 1500 && numPostes.replace('.', '').replace(',', '.') <= 2500) {
+            setValorHonorarios("12 x R$ 1900,00 ");
+        } else if (numPostes.replace('.', '').replace(',', '.') > 2500 && numPostes.replace('.', '').replace(',', '.') <= 5000) {
             setValorHonorarios("12 x R$ 2500,00 ");
-        } else if (numPostes > 5000) {
+        } else if (numPostes.replace('.', '').replace(',', '.') > 5000) {
             setValorHonorarios("12 x R$ 3000,00 ");
         } else {
             setValorHonorarios("0 x R$ 0,00");
@@ -57,18 +57,16 @@ function Calculadora(){
                 <Input label={"Valor por Poste"} value={valorPorPoste} onChange={setValorPorPoste}></Input>
             </div>
             <Button onClick={calcularValorTotal}>Calcular</Button>
-            <div class="container-inputs">
+            <div class="container-outputs">
                 <Input label={"Valor Total Atual"} value={valorTotalAtual} onChange={setValorTotalAtual}></Input>
                 <Input label={"Valor Mensal Ref."} value={valorMensalRef} onChange={setValorMensalRef}></Input>
-            </div>
-            <div class="container-inputs">
-                <Input label={"Economia Mensal"} value={valorEconomiaMensal} onChange={setValorEconomiaMensal}></Input>
+                <Input label={"Economia Mensal Gerada"} value={valorEconomiaMensal} onChange={setValorEconomiaMensal}></Input>
                 <Input label={"Valor Honorários"} value={valorHonorarios} onChange={setValorHonorarios}></Input>
             </div>
             <Lottie 
               options={defaultOptions}
-              height={400}
-              width={400}
+              height={300}
+              width={300}
               isStopped={animationState.isStopped}
               isPaused={animationState.isPaused}/>
         </div>
